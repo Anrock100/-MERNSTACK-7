@@ -1,0 +1,38 @@
+<h1>Personal form</h1>
+<p>ID : <input type="text" id="txtId"></p>
+<p>NAME : <input type="text" id="txtname"></p>
+
+<p>ADDRESS : <input type="text"></p>
+
+<p>PHONE : <input type="text"></p>
+<p>EMAIL : <input type="text"></p>
+<p><input type="button" value="CHECK" onclick="process()"></p>
+
+
+
+<script>
+    var process = function() {
+        //validation form using regular expression
+        var str1 = txtId.value;
+        var regexp = /[0-9]/;
+        var str2 = txtId.value;
+        var str3 = txtname;
+        var result1 = false;
+        var result2 = regexp.test(str1);
+        if (result2 == true) {
+            str2 = str2 + "<br/>ID :" + txtId.value;
+            result1 = true;
+        } else {
+            str3 = str3 + "Error :ID";
+        }
+
+        if (result1 == true) {
+
+        } else {
+            document.write(str2, str3);
+        }
+
+
+
+    }
+</script>

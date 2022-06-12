@@ -1,0 +1,31 @@
+<h1>Personal form</h1>
+<p>ID : <input type="text" id="txtId"></p>
+<p>NAME : <input type="text" id="txtname"></p>
+
+<p>ADDRESS : <input type="text" id="txtAddress"></p>
+
+<p>PHONE : <input type="text" id="txtPhone"></p>
+<p>EMAIL : <input type="text" id="txtEmail"></p>
+<p><input type="button" value="CHECK" onclick="process()"></p>
+
+<script>
+    var process = function() {
+        //validation form using regular expression
+        var str1 = txtId.value;
+        var regexp1 = /[0-9]/;
+        var regexp2 = /[a-zA-Z]/;
+        var regexp3 = /[a-z]/;
+        var regexp4 = /[0-9]/;
+        var regexp5 = /[a-z]/;
+        var str2 = txtId.value;
+        var str3 = txtname.value;
+        var str4 = txtAddress.value;
+        var str5 = txtPhone.value;
+        var str6 = txtEmail.value;
+        if (regexp1.test(str1) && regexp2.test(str2)) {
+            document.write(str1, str2, str3, str4, str5);
+        } else {
+            document.write("Error");
+        }
+    }
+</script>
